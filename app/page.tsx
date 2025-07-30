@@ -145,20 +145,16 @@ export default function MediCarePage() {
             <div className="bg-gray-950 py-20">
                 <div className="container-custom">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        {/* Left Section - Circular Image */}
+                        {/* Left Section - Logo Image */}
                         <div className="flex justify-center lg:justify-start">
                             <div className="relative">
-                                <div className="w-80 h-80 rounded-full border-4 border-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.5)] overflow-hidden">
-                                    <Image
-                                        src="/img_carousel.16270e81-removebg-preview.png"
-                                        alt="MediCare"
-                                        width={320}
-                                        height={320}
-                                        className="object-cover w-full h-full"
-                                    />
-                                </div>
-                                {/* Glow effect overlay */}
-                                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-emerald-400/20 to-transparent pointer-events-none"></div>
+                                <Image
+                                    src="/img_carousel.16270e81-removebg-preview.png"
+                                    alt="MediCare"
+                                    width={200}
+                                    height={200}
+                                    className="object-contain"
+                                />
                             </div>
                         </div>
 
