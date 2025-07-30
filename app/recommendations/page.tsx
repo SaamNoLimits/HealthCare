@@ -33,7 +33,7 @@ export default function RecommandationsPage() {
     }).sort((a, b) => {
         // Trier par priorité puis par date
         const priorityOrder: { [key: string]: number } = { 'haute': 3, 'moyenne': 2, 'faible': 1 };
-        const priorityDiff = priorityOrder[b.priorite] - priorityOrder[a.priorite];
+        const priorityDiff = priorityOrder[b.priorite as keyof typeof priorityOrder] - priorityOrder[a.priorite as keyof typeof priorityOrder];
         if (priorityDiff !== 0) return priorityDiff;
 
         return new Date(b.datePublication).getTime() - new Date(a.datePublication).getTime();
