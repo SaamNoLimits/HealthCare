@@ -20,16 +20,18 @@ export default function RootLayout({
 }) {
     return (
         <html lang="fr" suppressHydrationWarning>
-        <body className={`${inter.className} min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200`}>
-        <ThemeProvider>
-            <div className="flex flex-col min-h-screen">
-                <Header />
-                <main className="flex-grow">
-                    {children}
-                </main>
-                <Footer />
-            </div>
-        </ThemeProvider>
+        <body className={`${inter.className} min-h-screen bg-gray-950 text-gray-100`}>
+        <div className="bg-gradient-radial min-h-screen">
+            <ThemeProvider>
+                <div className="flex flex-col min-h-screen">
+                    <Header />
+                    <main className="flex-grow">
+                        {children}
+                    </main>
+                    <Footer />
+                </div>
+            </ThemeProvider>
+        </div>
         </body>
         </html>
     );
