@@ -8,9 +8,9 @@
     }
 
     body {
-        font-feature-settings: 'rlig' 1, 'calt' 1;
-        @apply bg-gray-950 text-gray-100;
-    }
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+    @apply bg-background text-foreground transition-colors duration-300;
+}
 
     * {
         @apply border-gray-800;
