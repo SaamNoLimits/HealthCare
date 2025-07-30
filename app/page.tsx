@@ -151,8 +151,8 @@ export default function MediCarePage() {
                                 <Image
                                     src="/img_carousel.16270e81-removebg-preview.png"
                                     alt="MediCare"
-                                    width={200}
-                                    height={200}
+                                    width={400}
+                                    height={400}
                                     className="object-contain"
                                 />
                             </div>
