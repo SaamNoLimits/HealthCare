@@ -51,62 +51,121 @@ export default function MediCarePage() {
                 </div>
             </div>
 
-            {/* Features Section */}
+            {/* Suivi Médical Section */}
             <div className="bg-gray-950 py-20">
                 <div className="container-custom">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                        {/* Suivi Médical */}
-                        <div className="text-center animate-slideUp group" style={{ animationDelay: '0.8s' }}>
-                            <div className="relative mb-8">
-                                <div className="w-48 h-48 rounded-full border-4 border-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.5)] overflow-hidden mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        {/* Left Section - Circular Image */}
+                        <div className="flex justify-center lg:justify-start">
+                            <div className="relative">
+                                <div className="w-80 h-80 rounded-full border-4 border-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.5)] overflow-hidden">
                                     <Image
                                         src="/suivi.gif"
                                         alt="Suivi Médical"
-                                        width={192}
-                                        height={192}
+                                        width={320}
+                                        height={320}
                                         className="object-cover w-full h-full"
                                     />
                                 </div>
                                 <div className="absolute inset-0 rounded-full bg-gradient-to-b from-emerald-400/20 to-transparent pointer-events-none"></div>
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-4">Suivi Médical</h3>
-                            <p className="text-gray-300">Accédez à votre dossier médical complet en toute sécurité</p>
                         </div>
 
-                        {/* Gestion RDV */}
-                        <div className="text-center animate-slideUp group" style={{ animationDelay: '1s' }}>
-                            <div className="relative mb-8">
-                                <div className="w-48 h-48 rounded-full border-4 border-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.5)] overflow-hidden mx-auto group-hover:scale-110 transition-transform duration-300">
+                        {/* Right Section - Text */}
+                        <div className="text-center lg:text-left">
+                            <h2 className="text-4xl font-bold mb-6">
+                                <span className="text-white">Suivi</span>
+                                <span className="text-emerald-400 ml-2">Médical</span>
+                            </h2>
+                            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                                Accédez à votre dossier médical complet en toute sécurité. 
+                                Consultez vos antécédents, traitements en cours et résultats 
+                                d'analyses en temps réel. Notre plateforme garantit la 
+                                confidentialité de vos données de santé.
+                            </p>
+                            <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-[0_0_15px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] transition-all duration-300">
+                                Accéder au dossier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Gestion RDV Section */}
+            <div className="bg-gray-900 py-20">
+                <div className="container-custom">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        {/* Left Section - Circular Image */}
+                        <div className="flex justify-center lg:justify-start">
+                            <div className="relative">
+                                <div className="w-80 h-80 rounded-full border-4 border-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.5)] overflow-hidden">
                                     <Image
                                         src="/rendez.png"
                                         alt="Gestion RDV"
-                                        width={192}
-                                        height={192}
+                                        width={320}
+                                        height={320}
                                         className="object-cover w-full h-full"
                                     />
                                 </div>
                                 <div className="absolute inset-0 rounded-full bg-gradient-to-b from-emerald-400/20 to-transparent pointer-events-none"></div>
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-4">Gestion RDV</h3>
-                            <p className="text-gray-300">Planifiez et gérez vos rendez-vous médicaux facilement</p>
                         </div>
 
-                        {/* Conseils Santé */}
-                        <div className="text-center animate-slideUp group" style={{ animationDelay: '1.2s' }}>
-                            <div className="relative mb-8">
-                                <div className="w-48 h-48 rounded-full border-4 border-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.5)] overflow-hidden mx-auto group-hover:scale-110 transition-transform duration-300">
+                        {/* Right Section - Text */}
+                        <div className="text-center lg:text-left">
+                            <h2 className="text-4xl font-bold mb-6">
+                                <span className="text-white">Gestion</span>
+                                <span className="text-emerald-400 ml-2">RDV</span>
+                            </h2>
+                            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                                Planifiez et gérez vos rendez-vous médicaux facilement. 
+                                Consultez votre calendrier, prenez de nouveaux rendez-vous 
+                                et recevez des rappels automatiques. Simplifiez votre 
+                                suivi médical avec notre interface intuitive.
+                            </p>
+                            <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-[0_0_15px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] transition-all duration-300">
+                                Prendre rendez-vous
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Conseils Santé Section */}
+            <div className="bg-gray-950 py-20">
+                <div className="container-custom">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        {/* Left Section - Circular Image */}
+                        <div className="flex justify-center lg:justify-start">
+                            <div className="relative">
+                                <div className="w-80 h-80 rounded-full border-4 border-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.5)] overflow-hidden">
                                     <Image
                                         src="/conseils.gif"
                                         alt="Conseils Santé"
-                                        width={192}
-                                        height={192}
+                                        width={320}
+                                        height={320}
                                         className="object-cover w-full h-full"
                                     />
                                 </div>
                                 <div className="absolute inset-0 rounded-full bg-gradient-to-b from-emerald-400/20 to-transparent pointer-events-none"></div>
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-4">Conseils Santé</h3>
-                            <p className="text-gray-300">Recevez des recommandations personnalisées pour votre bien-être</p>
+                        </div>
+
+                        {/* Right Section - Text */}
+                        <div className="text-center lg:text-left">
+                            <h2 className="text-4xl font-bold mb-6">
+                                <span className="text-white">Conseils</span>
+                                <span className="text-emerald-400 ml-2">Santé</span>
+                            </h2>
+                            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                                Recevez des recommandations personnalisées pour votre bien-être. 
+                                Découvrez des conseils nutritionnels, exercices adaptés et 
+                                astuces pour maintenir une bonne santé. Notre équipe de 
+                                professionnels vous accompagne dans votre parcours santé.
+                            </p>
+                            <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-[0_0_15px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] transition-all duration-300">
+                                Voir les conseils
+                            </button>
                         </div>
                     </div>
                 </div>
