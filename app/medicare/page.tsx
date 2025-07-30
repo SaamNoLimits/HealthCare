@@ -21,18 +21,7 @@ export default function MediCarePage() {
                 {/* Content Overlay */}
                 <div className="relative z-10 flex items-center justify-center min-h-screen">
                     <div className="container-custom text-center">
-                        {/* Logo Section */}
-                        <div className="mb-8 animate-fadeIn">
-                            <div className="w-24 h-24 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl">
-                                <Image
-                                    src="/green-cross-isolated-vector-medical-pharmacy-icon-sign-symbol-medicine-services-flat-care-illustration-first-aid-eps-166199423-removebg-preview.png"
-                                    alt="MediCare Logo"
-                                    width={64}
-                                    height={64}
-                                    className="object-contain"
-                                />
-                            </div>
-                        </div>
+
 
                         {/* Main Title */}
                         <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 animate-slideUp">
