@@ -98,6 +98,47 @@ export default function MediCarePage() {
                 </div>
             </div>
 
+            {/* About Section */}
+            <div className="bg-gray-950 py-20">
+                <div className="container-custom">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        {/* Left Section - Circular Image */}
+                        <div className="flex justify-center lg:justify-start">
+                            <div className="relative">
+                                <div className="w-80 h-80 rounded-full border-4 border-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.5)] overflow-hidden">
+                                    <Image
+                                        src="/img_carousel.16270e81-removebg-preview.png"
+                                        alt="MediCare"
+                                        width={320}
+                                        height={320}
+                                        className="object-cover w-full h-full"
+                                    />
+                                </div>
+                                {/* Glow effect overlay */}
+                                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-emerald-400/20 to-transparent pointer-events-none"></div>
+                            </div>
+                        </div>
+
+                        {/* Right Section - Text and Button */}
+                        <div className="text-center lg:text-left">
+                            <h2 className="text-4xl font-bold mb-6">
+                                <span className="text-white">À propos de</span>
+                                <span className="text-emerald-400 ml-2">MediCare</span>
+                            </h2>
+                            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                                MediCare révolutionne l'accès aux soins de santé en offrant une plateforme 
+                                innovante qui connecte patients et professionnels de santé. Notre mission 
+                                est de simplifier la gestion médicale tout en garantissant la sécurité 
+                                et la confidentialité de vos données de santé.
+                            </p>
+                            <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-[0_0_15px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] transition-all duration-300">
+                                En savoir plus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {/* Stats Section */}
             <div className="bg-gray-900/50 py-20">
                 <div className="container-custom">
