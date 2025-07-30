@@ -9,11 +9,11 @@ export default function HomePage() {
     // Récupérer le dernier rendez-vous
     const dernierRendezVous = rendezvousData.rendezvous
         .filter(rv => rv.statut === 'a_venir')
-        .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())[0];
+        .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())[0] as any;
 
     // Récupérer la recommandation du jour (la plus récente)
     const recommandationDuJour = recommandationsData.recommandations
-        .sort((a, b) => new Date(b.datePublication).getTime() - new Date(a.datePublication).getTime())[0];
+        .sort((a, b) => new Date(b.datePublication).getTime() - new Date(a.datePublication).getTime())[0] as any;
 
     const patient = dossierData.patient;
 
