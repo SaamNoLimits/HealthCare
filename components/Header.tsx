@@ -11,7 +11,7 @@ const Header = () => {
     const { theme, toggleTheme } = useTheme();
 
     const navigation = [
-        { name: 'Accueil', href: '/' },
+        { name: 'Accueil', href: '/accueil' },
         { name: 'Rendez-vous', href: '/rendez-vous' },
         { name: 'Dossier médical', href: '/dossier' },
         { name: 'Recommandations', href: '/recommendations' },
@@ -23,7 +23,7 @@ const Header = () => {
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
                     <div className="flex items-center">
-                        <Link href="/medicare" className="flex items-center space-x-3 group">
+                        <Link href="/" className="flex items-center space-x-3 group">
                             <Image
                                 src="/img_carousel.16270e81-removebg-preview.png"
                                 alt="MediCare Logo"

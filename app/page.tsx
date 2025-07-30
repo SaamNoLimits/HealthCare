@@ -1,193 +1,123 @@
 import Link from 'next/link';
-import AppointmentCard from '../components/AppointmentCard';
-import HealthTipCard from '../components/HealthTipCard';
-import rendezvousData from '../data/rendezvous.json';
-import recommandationsData from '../data/recommendations.json';
-import dossierData from '../data/dossier.json';
+import Image from 'next/image';
 
-export default function HomePage() {
-    // Récupérer le dernier rendez-vous
-    const dernierRendezVous = rendezvousData.rendezvous
-        .filter(rv => rv.statut === 'a_venir')
-        .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())[0];
-
-    // Récupérer la recommandation du jour (la plus récente)
-    const recommandationDuJour = recommandationsData.recommandations
-        .sort((a, b) => new Date(b.datePublication).getTime() - new Date(a.datePublication).getTime())[0];
-
-    const patient = dossierData.patient;
-
-    const getGreeting = () => {
-        const hour = new Date().getHours();
-        if (hour < 12) return 'Bonjour';
-        if (hour < 18) return 'Bon après-midi';
-        return 'Bonsoir';
-    };
-
+export default function MediCarePage() {
     return (
-        <div className="container-custom py-20">
-            <div className="mb-12 animate-fadeIn">
-                <div className="text-center mb-8">
-                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                        {getGreeting()}, {patient.prenom} 👋
-                    </h1>
-                    <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                        Bienvenue sur votre portail de suivi médical personnalisé
-                    </p>
-                </div>
-            </div>
-
-            {/* Statistiques rapides */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                <div className="card-elevated animate-slideUp group">
-                    <div className="flex items-center">
-                        <div className="p-4 bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                            <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-                        <div className="ml-4">
-                            <p className="text-sm font-medium text-gray-400">Prochains RDV</p>
-                            <p className="text-3xl font-bold text-white">
-                                {rendezvousData.rendezvous.filter(rv => rv.statut === 'a_venir').length}
-                            </p>
-                        </div>
-                    </div>
+        <div className="min-h-screen bg-gray-950">
+            {/* Hero Section with Background Image */}
+            <div className="relative min-h-screen">
+                {/* Background Image with Overlay */}
+                <div className="absolute inset-0">
+                    <Image
+                        src="/656301b7ee779bc6fb6cb469fc7596a5.gif"
+                        alt="Healthcare background"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-gray-950/70"></div>
                 </div>
 
-                <div className="card-elevated animate-slideUp group" style={{ animationDelay: '0.1s' }}>
-                    <div className="flex items-center">
-                        <div className="p-4 bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                            <svg className="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                        </div>
-                        <div className="ml-4">
-                            <p className="text-sm font-medium text-gray-400">Traitements actifs</p>
-                            <p className="text-3xl font-bold text-white">
-                                {dossierData.traitements.filter(t => t.statut === 'actif').length}
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                {/* Content Overlay */}
+                <div className="relative z-10 flex items-center justify-center min-h-screen">
+                    <div className="container-custom text-center">
 
-                <div className="card-elevated animate-slideUp group" style={{ animationDelay: '0.2s' }}>
-                    <div className="flex items-center">
-                        <div className="p-4 bg-gradient-to-r from-amber-500/20 to-amber-600/20 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                            <svg className="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </div>
-                        <div className="ml-4">
-                            <p className="text-sm font-medium text-gray-400">Allergies</p>
-                            <p className="text-3xl font-bold text-white">
-                                {dossierData.allergies.length}
-                            </p>
-                        </div>
-                    </div>
-                </div>
 
-                <div className="card-elevated animate-slideUp group" style={{ animationDelay: '0.3s' }}>
-                    <div className="flex items-center">
-                        <div className="p-4 bg-gradient-to-r from-purple-500/20 to-purple-600/20 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                            <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </div>
-                        <div className="ml-4">
-                            <p className="text-sm font-medium text-gray-400">Recommandations</p>
-                            <p className="text-3xl font-bold text-white">
-                                {recommandationsData.recommandations.length}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        {/* Main Title */}
+                        <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 animate-slideUp">
+                            MediCare
+                        </h1>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-                {/* Prochain rendez-vous */}
-                <div className="animate-slideUp" style={{ animationDelay: '0.4s' }}>
-                    <div className="flex justify-between items-center mb-6">
-                        <h2 className="text-2xl font-bold text-white">
-                            Prochain rendez-vous
-                        </h2>
-                        <Link href="/rendez-vous" className="text-emerald-400 hover:text-emerald-300 transition-colors">
-                            Voir tous →
-                        </Link>
-                    </div>
+                        {/* Subtitle */}
+                        <p className="text-2xl text-gray-300 mb-8 animate-slideUp" style={{ animationDelay: '0.2s' }}>
+                            Votre portail de santé connecté
+                        </p>
 
-                    {dernierRendezVous ? (
-                        <AppointmentCard rendezvous={dernierRendezVous} />
-                    ) : (
-                        <div className="card text-center py-12">
-                            <div className="w-16 h-16 bg-gradient-to-r from-gray-600/20 to-gray-700/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                </svg>
-                            </div>
-                            <p className="text-gray-400 mb-4">
-                                Aucun rendez-vous à venir
-                            </p>
-                            <Link href="/rendez-vous" className="btn-primary inline-block">
-                                Prendre rendez-vous
+                        {/* Description */}
+                        <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-12 animate-slideUp" style={{ animationDelay: '0.4s' }}>
+                            Accédez à votre dossier médical, gérez vos rendez-vous et recevez des recommandations personnalisées pour votre bien-être
+                        </p>
+
+                        {/* Call to Action */}
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slideUp" style={{ animationDelay: '0.6s' }}>
+                            <Link href="/accueil" className="btn-primary text-lg px-8 py-4">
+                                Accéder au portail
+                            </Link>
+                            <Link href="/rendez-vous" className="btn-secondary text-lg px-8 py-4">
+                                Mes rendez-vous
                             </Link>
                         </div>
-                    )}
-                </div>
-
-                {/* Recommandation du jour */}
-                <div className="animate-slideUp" style={{ animationDelay: '0.5s' }}>
-                    <div className="flex justify-between items-center mb-6">
-                        <h2 className="text-2xl font-bold text-white">
-                            Conseil santé du jour
-                        </h2>
-                        <Link href="/recommendations" className="text-emerald-400 hover:text-emerald-300 transition-colors">
-                            Voir tous →
-                        </Link>
                     </div>
-
-                    <HealthTipCard recommandation={recommandationDuJour} compact />
                 </div>
             </div>
 
-            {/* Actions rapides */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <Link href="/rendez-vous" className="card-elevated group hover:scale-105 transition-transform duration-300">
-                    <div className="text-center">
-                        <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                            <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-                        <h3 className="text-xl font-bold text-white mb-2">Mes Rendez-vous</h3>
-                        <p className="text-gray-400">Consultez et gérez vos rendez-vous médicaux</p>
-                    </div>
-                </Link>
 
-                <Link href="/dossier" className="card-elevated group hover:scale-105 transition-transform duration-300">
-                    <div className="text-center">
-                        <div className="w-16 h-16 bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                            <svg className="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                        </div>
-                        <h3 className="text-xl font-bold text-white mb-2">Dossier Médical</h3>
-                        <p className="text-gray-400">Accédez à votre historique médical complet</p>
-                    </div>
-                </Link>
 
-                <Link href="/recommendations" className="card-elevated group hover:scale-105 transition-transform duration-300">
-                    <div className="text-center">
-                        <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                            <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
+            {/* About Section */}
+            <div className="bg-gray-950 py-20">
+                <div className="container-custom">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        {/* Left Section - Circular Image */}
+                        <div className="flex justify-center lg:justify-start">
+                            <div className="relative">
+                                <div className="w-80 h-80 rounded-full border-4 border-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.5)] overflow-hidden">
+                                    <Image
+                                        src="/img_carousel.16270e81-removebg-preview.png"
+                                        alt="MediCare"
+                                        width={320}
+                                        height={320}
+                                        className="object-cover w-full h-full"
+                                    />
+                                </div>
+                                {/* Glow effect overlay */}
+                                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-emerald-400/20 to-transparent pointer-events-none"></div>
+                            </div>
                         </div>
-                        <h3 className="text-xl font-bold text-white mb-2">Recommandations</h3>
-                        <p className="text-gray-400">Découvrez des conseils santé personnalisés</p>
+
+                        {/* Right Section - Text and Button */}
+                        <div className="text-center lg:text-left">
+                            <h2 className="text-4xl font-bold mb-6">
+                                <span className="text-white">À propos de</span>
+                                <span className="text-emerald-400 ml-2">MediCare</span>
+                            </h2>
+                            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                                MediCare révolutionne l'accès aux soins de santé en offrant une plateforme 
+                                innovante qui connecte patients et professionnels de santé. Notre mission 
+                                est de simplifier la gestion médicale tout en garantissant la sécurité 
+                                et la confidentialité de vos données de santé.
+                            </p>
+                            <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-[0_0_15px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] transition-all duration-300">
+                                En savoir plus
+                            </button>
+                        </div>
                     </div>
-                </Link>
+                </div>
+            </div>
+
+            {/* Stats Section */}
+            <div className="bg-gray-900/50 py-20">
+                <div className="container-custom">
+                    <h2 className="text-3xl font-bold text-white text-center mb-12">MediCare en chiffres</h2>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div className="text-center">
+                            <div className="text-4xl font-bold text-emerald-400 mb-2">10k+</div>
+                            <div className="text-gray-400">Patients satisfaits</div>
+                        </div>
+                        <div className="text-center">
+                            <div className="text-4xl font-bold text-blue-400 mb-2">50+</div>
+                            <div className="text-gray-400">Établissements partenaires</div>
+                        </div>
+                        <div className="text-center">
+                            <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
+                            <div className="text-gray-400">Support disponible</div>
+                        </div>
+                        <div className="text-center">
+                            <div className="text-4xl font-bold text-teal-400 mb-2">99.9%</div>
+                            <div className="text-gray-400">Sécurité garantie</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
-}
+} 
