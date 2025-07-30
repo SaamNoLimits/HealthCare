@@ -9,8 +9,8 @@ export default function MediCarePage() {
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0">
                     <Image
-                        src="/healthcare-concept-national-science-day_524876-2162.avif"
-                        alt="Healthcare professionals"
+                        src="/656301b7ee779bc6fb6cb469fc7596a5.gif"
+                        alt="Healthcare background"
                         fill
                         className="object-cover"
                         priority
