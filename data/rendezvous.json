@@ -1,0 +1,59 @@
+{
+  "rendezvous": [
+    {
+      "id": 1,
+      "medecin": "Dr. Marie Dubois",
+      "specialite": "Médecin généraliste",
+      "date": "2025-08-15",
+      "heure": "14:30",
+      "lieu": "Cabinet médical Centre-ville",
+      "adresse": "12 Rue de la Paix, 75001 Paris",
+      "statut": "a_venir",
+      "type": "Consultation de suivi"
+    },
+    {
+      "id": 2,
+      "medecin": "Dr. Pierre Martin",
+      "specialite": "Cardiologue",
+      "date": "2025-09-02",
+      "heure": "10:00",
+      "lieu": "Clinique du Cœur",
+      "adresse": "45 Avenue des Champs, 75008 Paris",
+      "statut": "a_venir",
+      "type": "Électrocardiogramme"
+    },
+    {
+      "id": 3,
+      "medecin": "Dr. Sophie Leroux",
+      "specialite": "Dermatologue",
+      "date": "2025-07-20",
+      "heure": "16:45",
+      "lieu": "Centre dermatologique",
+      "adresse": "8 Boulevard Saint-Michel, 75005 Paris",
+      "statut": "passe",
+      "type": "Contrôle annuel"
+    },
+    {
+      "id": 4,
+      "medecin": "Dr. Marie Dubois",
+      "specialite": "Médecin généraliste",
+      "date": "2025-06-10",
+      "heure": "09:15",
+      "lieu": "Cabinet médical Centre-ville",
+      "adresse": "12 Rue de la Paix, 75001 Paris",
+      "statut": "passe",
+      "type": "Consultation générale"
+    },
+    {
+      "id": 5,
+      "medecin": "Dr. Jean Moreau",
+      "specialite": "Ophtalmologue",
+      "date": "2025-05-15",
+      "heure": "11:30",
+      "lieu": "Cabinet d'ophtalmologie",
+      "adresse": "23 Rue de Rivoli, 75004 Paris",
+      "statut": "passe",
+      "type": "Examen de la vue"
+    }
+  ]
+}

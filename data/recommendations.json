@@ -1,0 +1,108 @@
+{
+  "recommandations": [
+    {
+      "id": 1,
+      "titre": "Hydratation quotidienne",
+      "description": "Buvez au moins 1,5 litre d'eau par jour pour maintenir une bonne hydratation.",
+      "categorie": "Nutrition",
+      "priorite": "haute",
+      "datePublication": "2025-07-30",
+      "conseils": [
+        "Commencez votre journée par un grand verre d'eau",
+        "Gardez une bouteille d'eau à portée de main",
+        "Alternez avec des tisanes non sucrées"
+      ]
+    },
+    {
+      "id": 2,
+      "titre": "Activité physique régulière",
+      "description": "Pratiquez au moins 30 minutes de marche rapide par jour.",
+      "categorie": "Activité physique",
+      "priorite": "haute",
+      "datePublication": "2025-07-29",
+      "conseils": [
+        "Préférez les escaliers à l'ascenseur",
+        "Descendez un arrêt plus tôt en transport",
+        "Marchez après chaque repas"
+      ]
+    },
+    {
+      "id": 3,
+      "titre": "Sommeil réparateur",
+      "description": "Dormez entre 7 et 9 heures par nuit pour une récupération optimale.",
+      "categorie": "Sommeil",
+      "priorite": "haute",
+      "datePublication": "2025-07-28",
+      "conseils": [
+        "Établissez une routine de coucher",
+        "Évitez les écrans 1h avant le sommeil",
+        "Maintenez une température fraîche dans la chambre"
+      ]
+    },
+    {
+      "id": 4,
+      "titre": "Alimentation équilibrée",
+      "description": "Consommez 5 portions de fruits et légumes par jour.",
+      "categorie": "Nutrition",
+      "priorite": "moyenne",
+      "datePublication": "2025-07-27",
+      "conseils": [
+        "Variez les couleurs dans votre assiette",
+        "Privilégiez les produits de saison",
+        "Intégrez des légumes à chaque repas"
+      ]
+    },
+    {
+      "id": 5,
+      "titre": "Gestion du stress",
+      "description": "Pratiquez 10 minutes de méditation ou de respiration profonde quotidiennement.",
+      "categorie": "Sommeil",
+      "priorite": "moyenne",
+      "datePublication": "2025-07-26",
+      "conseils": [
+        "Utilisez des applications de méditation guidée",
+        "Pratiquez la cohérence cardiaque",
+        "Prenez des pauses régulières dans votre journée"
+      ]
+    },
+    {
+      "id": 6,
+      "titre": "Étirements quotidiens",
+      "description": "Effectuez 15 minutes d'étirements pour maintenir votre souplesse.",
+      "categorie": "Activité physique",
+      "priorite": "moyenne",
+      "datePublication": "2025-07-25",
+      "conseils": [
+        "Étirez-vous au réveil",
+        "Faites des pauses étirements au travail",
+        "Concentrez-vous sur les zones tendues"
+      ]
+    },
+    {
+      "id": 7,
+      "titre": "Exposition au soleil",
+      "description": "Exposez-vous 15 minutes au soleil chaque jour pour la vitamine D.",
+      "categorie": "Nutrition",
+      "priorite": "faible",
+      "datePublication": "2025-07-24",
+      "conseils": [
+        "Sortez en milieu de matinée ou fin d'après-midi",
+        "Protégez votre peau avec une crème solaire",
+        "Profitez des espaces verts"
+      ]
+    },
+    {
+      "id": 8,
+      "titre": "Hygiène du sommeil",
+      "description": "Créez un environnement propice au sommeil dans votre chambre.",
+      "categorie": "Sommeil",
+      "priorite": "moyenne",
+      "datePublication": "2025-07-23",
+      "conseils": [
+        "Investissez dans une literie de qualité",
+        "Utilisez des rideaux occultants",
+        "Éliminez les sources de bruit"
+      ]
+    }
+  ]
+}
