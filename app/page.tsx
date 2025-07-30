@@ -142,7 +142,7 @@ export default function HomePage() {
                             Conseil santé du jour
                         </h2>
                         <Link
-                            href="/recommandations"
+                            href="/recommendations"
                             className="text-medical-primary hover:text-blue-700 font-medium text-sm"
                         >
                             Voir toutes →
@@ -195,7 +195,7 @@ export default function HomePage() {
                         </div>
                     </Link>
 
-                    <Link href="/recommandations" className="card hover:shadow-lg transition-all duration-200 group">
+                    <Link href="/recommendations" className="card hover:shadow-lg transition-all duration-200 group">
                         <div className="flex items-center space-x-4">
                             <div className="p-3 bg-purple-100 dark:bg-purple-900 rounded-lg group-hover:scale-110 transition-transform duration-200">
                                 <svg className="w-6 h-6 text-purple-600 dark:text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

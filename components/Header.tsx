@@ -13,7 +13,7 @@ const Header = () => {
         { name: 'Accueil', href: '/' },
         { name: 'Rendez-vous', href: '/rendez-vous' },
         { name: 'Dossier médical', href: '/dossier' },
-        { name: 'Recommandations', href: '/recommandations' },
+        { name: 'Recommandations', href: '/recommendations' },
     ];
 
     return (
@@ -22,7 +22,7 @@ const Header = () => {
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
                     <div className="flex items-center">
-                        <Link href="/main/public" className="flex items-center space-x-2">
+                        <Link href="/" className="flex items-center space-x-2">
                             <div className="w-8 h-8 bg-medical-primary rounded-full flex items-center justify-center">
                                 <span className="text-white font-bold text-sm">M</span>
                             </div>
