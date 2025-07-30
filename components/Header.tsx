@@ -27,8 +27,8 @@ const Header = () => {
                             <Image
                                 src="/img_carousel.16270e81-removebg-preview.png"
                                 alt="MediCare Logo"
-                                width={40}
-                                height={40}
+                                width={48}
+                                height={48}
                                 className="object-contain group-hover:scale-110 transition-transform duration-300"
                             />
                             <div className="flex flex-col">
