@@ -172,3 +172,4 @@ Ce projet est développé dans le cadre d'un exercice pédagogique Next.js.
 ---
 
 **Développé avec ❤️ pour améliorer l'expérience patient**
+# HealthCare
