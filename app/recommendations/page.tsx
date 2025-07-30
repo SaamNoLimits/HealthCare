@@ -32,7 +32,7 @@ export default function RecommandationsPage() {
         }
     }).sort((a, b) => {
         // Trier par priorité puis par date
-        const priorityOrder = { 'haute': 3, 'moyenne': 2, 'faible': 1 };
+        const priorityOrder: { [key: string]: number } = { 'haute': 3, 'moyenne': 2, 'faible': 1 };
         const priorityDiff = priorityOrder[b.priorite] - priorityOrder[a.priorite];
         if (priorityDiff !== 0) return priorityDiff;
 
@@ -51,7 +51,7 @@ export default function RecommandationsPage() {
         haute: recommandations.filter(r => r.priorite === 'haute').length,
         moyenne: recommandations.filter(r => r.priorite === 'moyenne').length,
         faible: recommandations.filter(r => r.priorite === 'faible').length,
-    };
+    } as any;
 
     return (
         <div className="container-custom py-8">
@@ -168,9 +168,8 @@ export default function RecommandationsPage() {
                     filteredRecommandations.map((recommandation, index) => (
                         <HealthTipCard
                             key={recommandation.id}
-                            recommandation={recommandation}
+                            recommandation={recommandation as any}
                             className="animate-slideUp"
-                            style={{ animationDelay: `${index * 0.1}s` }}
                         />
                     ))
                 ) : (
