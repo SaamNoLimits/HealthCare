@@ -11,18 +11,11 @@ const Header = () => {
     const { theme, toggleTheme } = useTheme();
 
     const navigation = [
-        { name: 'Accueil', href: '#accueil' },
-        { name: 'Rendez-vous', href: '#rendez-vous' },
-        { name: 'Dossier médical', href: '#dossier' },
-        { name: 'Recommandations', href: '#recommendations' },
+        { name: 'Accueil', href: '/' },
+        { name: 'Rendez-vous', href: '/rendez-vous' },
+        { name: 'Dossier médical', href: '/dossier' },
+        { name: 'Recommandations', href: '/recommendations' },
     ];
-
-    const scrollToSection = (sectionId: string) => {
-        const element = document.getElementById(sectionId.replace('#', ''));
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
 
     return (
         <header className="bg-gray-950/80 backdrop-blur-md border-b border-gray-800/50 sticky top-0 z-50">
@@ -30,10 +23,7 @@ const Header = () => {
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
                     <div className="flex items-center">
-                        <button 
-                            onClick={() => scrollToSection('#accueil')}
-                            className="flex items-center space-x-3 group"
-                        >
+                        <Link href="/" className="flex items-center space-x-3 group">
                             <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden">
                                 <Image
                                     src="/logo.png"
@@ -49,19 +39,22 @@ const Header = () => {
                                 </span>
                                 <span className="text-xs text-gray-400">Portail Patient</span>
                             </div>
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Navigation */}
                     <nav className="hidden md:flex space-x-2">
                         {navigation.map((item) => (
-                            <button
+                            <Link
                                 key={item.name}
-                                onClick={() => scrollToSection(item.href)}
-                                className="nav-link text-gray-300 hover:text-emerald-400"
+                                href={item.href}
+                                className={classNames(
+                                    'nav-link',
+                                    pathname === item.href ? 'nav-link-active' : 'text-gray-300'
+                                )}
                             >
                                 {item.name}
-                            </button>
+                            </Link>
                         ))}
                     </nav>
 
