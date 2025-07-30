@@ -52,48 +52,62 @@ export default function MediCarePage() {
             </div>
 
             {/* Features Section */}
-            <div className="container-custom py-20">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div className="card-elevated text-center p-8 animate-slideUp group" style={{ animationDelay: '0.8s' }}>
-                        <div className="flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <Image
-                                src="/suivi.gif"
-                                alt="Suivi Médical"
-                                width={80}
-                                height={80}
-                                className="object-contain"
-                            />
+            <div className="bg-gray-950 py-20">
+                <div className="container-custom">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                        {/* Suivi Médical */}
+                        <div className="text-center animate-slideUp group" style={{ animationDelay: '0.8s' }}>
+                            <div className="relative mb-8">
+                                <div className="w-48 h-48 rounded-full border-4 border-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.5)] overflow-hidden mx-auto group-hover:scale-110 transition-transform duration-300">
+                                    <Image
+                                        src="/suivi.gif"
+                                        alt="Suivi Médical"
+                                        width={192}
+                                        height={192}
+                                        className="object-cover w-full h-full"
+                                    />
+                                </div>
+                                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-emerald-400/20 to-transparent pointer-events-none"></div>
+                            </div>
+                            <h3 className="text-2xl font-bold text-white mb-4">Suivi Médical</h3>
+                            <p className="text-gray-300">Accédez à votre dossier médical complet en toute sécurité</p>
                         </div>
-                        <h3 className="text-xl font-bold text-white mb-4">Suivi Médical</h3>
-                        <p className="text-gray-400">Accédez à votre dossier médical complet en toute sécurité</p>
-                    </div>
 
-                    <div className="card-elevated text-center p-8 animate-slideUp group" style={{ animationDelay: '1s' }}>
-                        <div className="flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <Image
-                                src="/rendez.png"
-                                alt="Gestion RDV"
-                                width={80}
-                                height={80}
-                                className="object-contain"
-                            />
+                        {/* Gestion RDV */}
+                        <div className="text-center animate-slideUp group" style={{ animationDelay: '1s' }}>
+                            <div className="relative mb-8">
+                                <div className="w-48 h-48 rounded-full border-4 border-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.5)] overflow-hidden mx-auto group-hover:scale-110 transition-transform duration-300">
+                                    <Image
+                                        src="/rendez.png"
+                                        alt="Gestion RDV"
+                                        width={192}
+                                        height={192}
+                                        className="object-cover w-full h-full"
+                                    />
+                                </div>
+                                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-emerald-400/20 to-transparent pointer-events-none"></div>
+                            </div>
+                            <h3 className="text-2xl font-bold text-white mb-4">Gestion RDV</h3>
+                            <p className="text-gray-300">Planifiez et gérez vos rendez-vous médicaux facilement</p>
                         </div>
-                        <h3 className="text-xl font-bold text-white mb-4">Gestion RDV</h3>
-                        <p className="text-gray-400">Planifiez et gérez vos rendez-vous médicaux facilement</p>
-                    </div>
 
-                    <div className="card-elevated text-center p-8 animate-slideUp group" style={{ animationDelay: '1.2s' }}>
-                        <div className="flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <Image
-                                src="/conseils.gif"
-                                alt="Conseils Santé"
-                                width={80}
-                                height={80}
-                                className="object-contain"
-                            />
+                        {/* Conseils Santé */}
+                        <div className="text-center animate-slideUp group" style={{ animationDelay: '1.2s' }}>
+                            <div className="relative mb-8">
+                                <div className="w-48 h-48 rounded-full border-4 border-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.5)] overflow-hidden mx-auto group-hover:scale-110 transition-transform duration-300">
+                                    <Image
+                                        src="/conseils.gif"
+                                        alt="Conseils Santé"
+                                        width={192}
+                                        height={192}
+                                        className="object-cover w-full h-full"
+                                    />
+                                </div>
+                                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-emerald-400/20 to-transparent pointer-events-none"></div>
+                            </div>
+                            <h3 className="text-2xl font-bold text-white mb-4">Conseils Santé</h3>
+                            <p className="text-gray-300">Recevez des recommandations personnalisées pour votre bien-être</p>
                         </div>
-                        <h3 className="text-xl font-bold text-white mb-4">Conseils Santé</h3>
-                        <p className="text-gray-400">Recevez des recommandations personnalisées pour votre bien-être</p>
                     </div>
                 </div>
             </div>
