@@ -55,12 +55,12 @@ export default function MediCarePage() {
             <div className="container-custom py-20">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="card-elevated text-center p-8 animate-slideUp group" style={{ animationDelay: '0.8s' }}>
-                        <div className="w-20 h-20 bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <div className="flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                             <Image
                                 src="/suivi.gif"
                                 alt="Suivi Médical"
-                                width={48}
-                                height={48}
+                                width={80}
+                                height={80}
                                 className="object-contain"
                             />
                         </div>
@@ -69,12 +69,12 @@ export default function MediCarePage() {
                     </div>
 
                     <div className="card-elevated text-center p-8 animate-slideUp group" style={{ animationDelay: '1s' }}>
-                        <div className="w-20 h-20 bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <div className="flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                             <Image
                                 src="/rendez.png"
                                 alt="Gestion RDV"
-                                width={48}
-                                height={48}
+                                width={80}
+                                height={80}
                                 className="object-contain"
                             />
                         </div>
@@ -83,12 +83,12 @@ export default function MediCarePage() {
                     </div>
 
                     <div className="card-elevated text-center p-8 animate-slideUp group" style={{ animationDelay: '1.2s' }}>
-                        <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <div className="flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                             <Image
                                 src="/conseils.gif"
                                 alt="Conseils Santé"
-                                width={48}
-                                height={48}
+                                width={80}
+                                height={80}
                                 className="object-contain"
                             />
                         </div>
