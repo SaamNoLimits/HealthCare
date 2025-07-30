@@ -12,8 +12,8 @@ const Footer = () => {
                             <Image
                                 src="/img_carousel.16270e81-removebg-preview.png"
                                 alt="MediCare Logo"
-                                width={40}
-                                height={40}
+                                width={90}
+                                height={90}
                                 className="object-contain"
                             />
                             <div>

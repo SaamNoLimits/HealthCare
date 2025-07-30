@@ -151,8 +151,8 @@ export default function MediCarePage() {
                                 <Image
                                     src="/img_carousel.16270e81-removebg-preview.png"
                                     alt="MediCare"
-                                    width={400}
-                                    height={400}
+                                    width={800}
+                                    height={800}
                                     className="object-contain"
                                 />
                             </div>
@@ -178,30 +178,7 @@ export default function MediCarePage() {
                 </div>
             </div>
 
-            {/* Stats Section */}
-            <div className="bg-gray-900/50 py-20">
-                <div className="container-custom">
-                    <h2 className="text-3xl font-bold text-white text-center mb-12">MediCare en chiffres</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <div className="text-center">
-                            <div className="text-4xl font-bold text-emerald-400 mb-2">10k+</div>
-                            <div className="text-gray-400">Patients satisfaits</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-4xl font-bold text-blue-400 mb-2">50+</div>
-                            <div className="text-gray-400">Établissements partenaires</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
-                            <div className="text-gray-400">Support disponible</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-4xl font-bold text-teal-400 mb-2">99.9%</div>
-                            <div className="text-gray-400">Sécurité garantie</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     );
 } 
