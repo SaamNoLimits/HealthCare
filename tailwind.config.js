@@ -20,6 +20,7 @@ module.exports = {
         'fade-in': 'fadeIn 0.6s ease-out',
         'slide-up': 'slideUp 0.5s ease-out',
         'pulse-glow': 'pulseGlow 2s ease-in-out infinite alternate',
+        'bounce': 'bounce 2s infinite',
       },
       backdropBlur: {
         xs: '2px',

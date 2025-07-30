@@ -22,15 +22,15 @@ export default function RootLayout({
         <html lang="fr" suppressHydrationWarning>
         <body className={`${inter.className} min-h-screen bg-gray-950 text-gray-100`}>
         <div className="bg-gradient-radial min-h-screen">
-            <ThemeProvider>
-                <div className="flex flex-col min-h-screen">
-                    <Header />
-                    <main className="flex-grow">
-                        {children}
-                    </main>
-                    <Footer />
-                </div>
-            </ThemeProvider>
+        <ThemeProvider>
+            <div className="flex flex-col min-h-screen">
+                <Header />
+                <main className="flex-grow">
+                    {children}
+                </main>
+                <Footer />
+            </div>
+        </ThemeProvider>
         </div>
         </body>
         </html>

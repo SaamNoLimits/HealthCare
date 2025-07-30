@@ -23,7 +23,7 @@ const Header = () => {
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
                     <div className="flex items-center">
-                        <Link href="/" className="flex items-center space-x-3 group">
+                        <Link href="/medicare" className="flex items-center space-x-3 group">
                             <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden">
                                 <Image
                                     src="/logo.png"
