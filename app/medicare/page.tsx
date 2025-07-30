@@ -55,30 +55,42 @@ export default function MediCarePage() {
             <div className="container-custom py-20">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="card-elevated text-center p-8 animate-slideUp group" style={{ animationDelay: '0.8s' }}>
-                        <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
+                        <div className="w-20 h-20 bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <Image
+                                src="/suivi.gif"
+                                alt="Suivi Médical"
+                                width={48}
+                                height={48}
+                                className="object-contain"
+                            />
                         </div>
                         <h3 className="text-xl font-bold text-white mb-4">Suivi Médical</h3>
                         <p className="text-gray-400">Accédez à votre dossier médical complet en toute sécurité</p>
                     </div>
 
                     <div className="card-elevated text-center p-8 animate-slideUp group" style={{ animationDelay: '1s' }}>
-                        <div className="w-16 h-16 bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <svg className="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
+                        <div className="w-20 h-20 bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <Image
+                                src="/rendez.png"
+                                alt="Gestion RDV"
+                                width={48}
+                                height={48}
+                                className="object-contain"
+                            />
                         </div>
                         <h3 className="text-xl font-bold text-white mb-4">Gestion RDV</h3>
                         <p className="text-gray-400">Planifiez et gérez vos rendez-vous médicaux facilement</p>
                     </div>
 
                     <div className="card-elevated text-center p-8 animate-slideUp group" style={{ animationDelay: '1.2s' }}>
-                        <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
+                        <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <Image
+                                src="/conseils.gif"
+                                alt="Conseils Santé"
+                                width={48}
+                                height={48}
+                                className="object-contain"
+                            />
                         </div>
                         <h3 className="text-xl font-bold text-white mb-4">Conseils Santé</h3>
                         <p className="text-gray-400">Recevez des recommandations personnalisées pour votre bien-être</p>
