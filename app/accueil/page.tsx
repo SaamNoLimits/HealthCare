@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import AppointmentCard from '../components/AppointmentCard';
-import HealthTipCard from '../components/HealthTipCard';
-import rendezvousData from '../data/rendezvous.json';
-import recommandationsData from '../data/recommendations.json';
-import dossierData from '../data/dossier.json';
+import AppointmentCard from '../../components/AppointmentCard';
+import HealthTipCard from '../../components/HealthTipCard';
+import rendezvousData from '../../data/rendezvous.json';
+import recommandationsData from '../../data/recommendations.json';
+import dossierData from '../../data/dossier.json';
 
 export default function HomePage() {
     // Récupérer le dernier rendez-vous
