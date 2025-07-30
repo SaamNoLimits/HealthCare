@@ -86,9 +86,8 @@ export default function RendezVousPage() {
                     filteredRendezVous.map((rendezvous, index) => (
                         <AppointmentCard
                             key={rendezvous.id}
-                            rendezvous={rendezvous}
+                            rendezvous={rendezvous as any}
                             className="animate-slideUp"
-                            style={{ animationDelay: `${index * 0.1}s` }}
                         />
                     ))
                 ) : (
