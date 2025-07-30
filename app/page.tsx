@@ -28,10 +28,10 @@ export default function HomePage() {
         <div className="container-custom py-20">
             <div className="mb-12 animate-fadeIn">
                 <div className="text-center mb-8">
-                    <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
                         {getGreeting()}, {patient.prenom} 👋
                     </h1>
-                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-400 max-w-2xl mx-auto">
                         Bienvenue sur votre portail de suivi médical personnalisé
                     </p>
                 </div>
@@ -47,8 +47,8 @@ export default function HomePage() {
                             </svg>
                         </div>
                         <div className="ml-4">
-                            <p className="text-sm font-medium text-muted-foreground">Prochains RDV</p>
-                            <p className="text-3xl font-bold text-foreground">
+                            <p className="text-sm font-medium text-gray-400">Prochains RDV</p>
+                            <p className="text-3xl font-bold text-white">
                                 {rendezvousData.rendezvous.filter(rv => rv.statut === 'a_venir').length}
                             </p>
                         </div>
@@ -63,8 +63,8 @@ export default function HomePage() {
                             </svg>
                         </div>
                         <div className="ml-4">
-                            <p className="text-sm font-medium text-muted-foreground">Traitements actifs</p>
-                            <p className="text-3xl font-bold text-foreground">
+                            <p className="text-sm font-medium text-gray-400">Traitements actifs</p>
+                            <p className="text-3xl font-bold text-white">
                                 {dossierData.traitements.filter(t => t.statut === 'actif').length}
                             </p>
                         </div>
@@ -79,8 +79,8 @@ export default function HomePage() {
                             </svg>
                         </div>
                         <div className="ml-4">
-                            <p className="text-sm font-medium text-muted-foreground">Allergies</p>
-                            <p className="text-3xl font-bold text-foreground">
+                            <p className="text-sm font-medium text-gray-400">Allergies</p>
+                            <p className="text-3xl font-bold text-white">
                                 {dossierData.allergies.length}
                             </p>
                         </div>
@@ -95,8 +95,8 @@ export default function HomePage() {
                             </svg>
                         </div>
                         <div className="ml-4">
-                            <p className="text-sm font-medium text-muted-foreground">Recommandations</p>
-                            <p className="text-3xl font-bold text-foreground">
+                            <p className="text-sm font-medium text-gray-400">Recommandations</p>
+                            <p className="text-3xl font-bold text-white">
                                 {recommandationsData.recommandations.length}
                             </p>
                         </div>
@@ -108,7 +108,7 @@ export default function HomePage() {
                 {/* Prochain rendez-vous */}
                 <div className="animate-slideUp" style={{ animationDelay: '0.4s' }}>
                     <div className="flex justify-between items-center mb-6">
-                        <h2 className="text-2xl font-bold text-foreground">
+                        <h2 className="text-2xl font-bold text-white">
                             Prochain rendez-vous
                         </h2>
                         <Link href="/rendez-vous" className="text-emerald-400 hover:text-emerald-300 transition-colors">
@@ -138,7 +138,7 @@ export default function HomePage() {
                 {/* Recommandation du jour */}
                 <div className="animate-slideUp" style={{ animationDelay: '0.5s' }}>
                     <div className="flex justify-between items-center mb-6">
-                        <h2 className="text-2xl font-bold text-foreground">
+                        <h2 className="text-2xl font-bold text-white">
                             Conseil santé du jour
                         </h2>
                         <Link href="/recommendations" className="text-emerald-400 hover:text-emerald-300 transition-colors">
@@ -159,8 +159,8 @@ export default function HomePage() {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
                         </div>
-                        <h3 className="text-xl font-bold text-foreground mb-2">Mes Rendez-vous</h3>
-                        <p className="text-muted-foreground">Consultez et gérez vos rendez-vous médicaux</p>
+                        <h3 className="text-xl font-bold text-white mb-2">Mes Rendez-vous</h3>
+                        <p className="text-gray-400">Consultez et gérez vos rendez-vous médicaux</p>
                     </div>
                 </Link>
 
@@ -171,8 +171,8 @@ export default function HomePage() {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
                         </div>
-                        <h3 className="text-xl font-bold text-foreground mb-2">Dossier Médical</h3>
-                        <p className="text-muted-foreground">Accédez à votre historique médical complet</p>
+                        <h3 className="text-xl font-bold text-white mb-2">Dossier Médical</h3>
+                        <p className="text-gray-400">Accédez à votre historique médical complet</p>
                     </div>
                 </Link>
 
@@ -183,8 +183,8 @@ export default function HomePage() {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
-                        <h3 className="text-xl font-bold text-foreground mb-2">Recommandations</h3>
-                        <p className="text-muted-foreground">Découvrez des conseils santé personnalisés</p>
+                        <h3 className="text-xl font-bold text-white mb-2">Recommandations</h3>
+                        <p className="text-gray-400">Découvrez des conseils santé personnalisés</p>
                     </div>
                 </Link>
             </div>
