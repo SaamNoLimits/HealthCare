@@ -9,15 +9,13 @@ const Footer = () => {
                     {/* Logo et description */}
                     <div className="col-span-1 md:col-span-2">
                         <div className="flex items-center space-x-3 mb-4">
-                            <div className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center overflow-hidden neon-glow">
-                                <Image
-                                    src="/logo.png"
-                                    alt="MediCare Logo"
-                                    width={32}
-                                    height={32}
-                                    className="object-contain"
-                                />
-                            </div>
+                            <Image
+                                src="/img_carousel.16270e81-removebg-preview.png"
+                                alt="MediCare Logo"
+                                width={40}
+                                height={40}
+                                className="object-contain"
+                            />
                             <div>
                                 <h3 className="text-xl font-bold text-white">Medi<span className="text-green-500 glow-text">Care</span></h3>
                                 <p className="text-sm text-gray-400">Portail Patient</p>
@@ -34,7 +32,7 @@ const Footer = () => {
                         <h4 className="text-white font-semibold mb-4">Navigation</h4>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/" className="text-gray-400 hover:text-green-400 transition-colors duration-300 text-sm">
+                                <Link href="/accueil" className="text-gray-400 hover:text-green-400 transition-colors duration-300 text-sm">
                                     Accueil
                                 </Link>
                             </li>
